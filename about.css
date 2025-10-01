@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fffaf8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.hero {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.hero-img {
+  width: 250px;
+  border-radius: 50%;
+}
+
+.hero-text h5 {
+  color: #ff7a59;
+  font-size: 16px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+}
+
+.experience-badge {
+  background-color: #ffe3d3;
+  color: #ff7a59;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #ff7a59;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.video-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff7f2;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.video-wrapper img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 122, 89, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.services {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.card {
+  background: #fdf1ec;
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #ff7a59;
+}
+
+.courses {
+  background: #fff7f2;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.course-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.course-card {
+  background: #ffffff;
+  border: 2px solid #ffd6c9;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 180px;
+  color: #333;
+  font-weight: bold;
+}
+
