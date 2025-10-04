@@ -1,0 +1,244 @@
+$primary-color: #ff5a1f;
+$primary-hover: #e04915;
+$light-red: #ffe6e6;
+$light-orange: #ffe0d6;
+$text-color: #333;
+$muted-color: #555;
+$white: #fff;
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: $white;
+  color: $text-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.btn {
+  background: $primary-color;
+  color: $white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 100px;
+
+  &:hover {
+    background: $primary-hover;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.discount {
+  display: inline-block;
+  background: $light-orange;
+  color: $primary-color;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint-lg) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.content {
+  flex: 1 1 450px;
+  max-width: 550px;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 28px;
+    }
+  }
+
+  p {
+    color: $muted-color;
+    font-size: 16px;
+    margin-bottom: 25px;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.image {
+  flex: 1 1 400px;
+  position: relative;
+  text-align: center;
+  margin-top: 32px;
+
+  img {
+    max-width: 60%;
+    border-radius: 20px;
+
+    @media (max-width: $breakpoint-sm) {
+      max-width: 80%;
+    }
+  }
+
+  .badge {
+    position: absolute;
+    background: $white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+
+    &.badge1 {
+      top: 20px;
+      right: 20px;
+    }
+
+    &.badge2 {
+      bottom: 20px;
+      left: 20px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 8%;
+  box-shadow: $box-shadow;
+  z-index: 1000;
+
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: $primary-color;
+    text-decoration: none;
+
+    i {
+      margin-right: 8px;
+      color: $primary-color;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    gap: 25px;
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: $text-color;
+      font-weight: 500;
+      transition: 0.3s;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &.active {
+      right: 0;
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    color: $text-color;
+    cursor: pointer;
+
+    div:hover {
+      color: $primary-color;
+    }
+  }
+
+  #close-navbar {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: $text-color;
+  }
+
+  /* Responsive navbar */
+  @media (max-width: $breakpoint-md) {
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100vh;
+      background: $white;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 60px 20px;
+      gap: 20px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.05);
+      transition: 0.4s;
+    }
+
+    #close-navbar {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    #menu-btn {
+      display: block;
+    }
+  }
+}
