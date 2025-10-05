@@ -1,3 +1,5 @@
+@import 'contact';
+@import 'courses';
 $primary-color: #ff5a1f;
 $primary-hover: #e04915;
 $light-red: #ffe6e6;
@@ -84,6 +86,7 @@ body {
     font-size: 40px;
     margin-bottom: 20px;
     line-height: 1.2;
+    color: black;
 
     @media (max-width: $breakpoint-sm) {
       font-size: 28px;
@@ -146,7 +149,9 @@ body {
     }
   }
 }
-
+.navbar{
+  display: block;
+}
 .header {
   position: fixed;
   top: 0;
