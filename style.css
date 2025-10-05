@@ -1,0 +1,133 @@
+:root {
+  --primary-color: #0eb582;
+  --text-color: #444;
+  --white: #fff;
+  --shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+    width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  padding: 1.5rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.header .logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+}
+
+.header .logo i {
+  margin-right: .5rem;
+  color: #0eb582;
+}
+
+.header .navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.header .navbar a {
+  font-size: 1.8rem;
+  color: #444;
+  text-decoration: none;
+}
+
+.header .navbar a:hover {
+  color: #0eb582;
+}
+
+.header .icons div {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #444;
+  margin-left: 2rem;
+}
+
+.header .icons div:hover {
+  color: #0eb582;
+}
+
+#close-navbar,
+#menu-btn {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 30rem;
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    z-index: 10000;
+    transition: .3s linear;
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  #close-navbar {
+    display: block;
+    text-align: right;
+    padding-bottom: 2rem;
+  }
+  
+  .header .navbar a {
+    display: block;
+    padding: 1.5rem 0;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
